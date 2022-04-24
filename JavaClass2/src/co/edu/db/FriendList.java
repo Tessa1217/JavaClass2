@@ -7,6 +7,7 @@ public class FriendList {
 
 	Scanner scn = new Scanner(System.in);
 
+	// Executing the program
 	public void execute() {
 		while (true) {
 			System.out.println("=============================================================");
@@ -52,6 +53,7 @@ public class FriendList {
 
 	}
 
+	// Adding new friend
 	public Friend addFriend() {
 		System.out.println("** ADD FRIENDS! **");
 		System.out.println("Name >>> ");
@@ -67,6 +69,7 @@ public class FriendList {
 		return friend;
 	}
 
+	// Searching friend
 	public Friend searchFriend() {
 		System.out.println("** SEARCH FRIEND! **");
 		System.out.println("Name >>> ");
@@ -75,6 +78,7 @@ public class FriendList {
 		return friend;
 	}
 
+	// Searching friend's birthday using social security number
 	public void searchBirthday() {
 		System.out.println("** SEARCH FRIEND'S BIRTHDAY **");
 		System.out.println("Name >>> ");
@@ -83,6 +87,7 @@ public class FriendList {
 		System.out.println(Friend.birthday(ssn));
 	}
 
+	// Deleting friend
 	public void deleteFriend() {
 		System.out.println("** DELETE FRIEND FROM LIST");
 		System.out.println("Name >>> ");
@@ -97,6 +102,8 @@ public class FriendList {
 		}
 	}
 
+	// Searching friend's gender using social security number (8th num = gender
+	// code)
 	public int searchGender() {
 		System.out.println("** SEARCH FRIEND'S GENDER **");
 		System.out.println("Name >>> ");
@@ -105,6 +112,7 @@ public class FriendList {
 		return genderCode;
 	}
 
+	// Verifying gender code (odd = male, even = female)
 	public String genderVerify(int genderCode) {
 		String gender = null;
 		if (genderCode % 2 != 0) {
@@ -116,6 +124,7 @@ public class FriendList {
 		return gender;
 	}
 
+	// Listing friends
 	public void listFriend(ArrayList<Friend> friends) {
 		System.out.println("** Current Friend List **");
 		System.out.println();
