@@ -5,7 +5,7 @@ public class Friend {
 	private String name;
 	private int age;
 	private String contact;
-	private String ssn;
+	private final String ssn;
 
 	Friend(String name, int age, String contact, String ssn) {
 		this.name = name;
@@ -14,65 +14,41 @@ public class Friend {
 		this.ssn = ssn;
 	}
 
-	/**
-	 * @return the name
-	 */
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/**
-	 * @return the age
-	 */
 	public int getAge() {
 		return age;
 	}
 
-	/**
-	 * @param age the age to set
-	 */
 	public void setAge(int age) {
 		this.age = age;
 	}
 
-	/**
-	 * @return the contact
-	 */
 	public String getContact() {
 		return contact;
 	}
 
-	/**
-	 * @param contact the contact to set
-	 */
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
-	/**
-	 * @return the ssn
-	 */
 	public String getSsn() {
 		return ssn;
 	}
 
-	/**
-	 * @param ssn the ssn to set
-	 */
-	public void setSsn(String ssn) {
-		this.ssn = ssn;
-	}
-
 	@Override
 	public String toString() {
-		return "Friend [name=" + name + ", age=" + age + ", contact=" + contact + ", ssn=" + ssn + "]";
+		return "Friend\nName: " + name + "\nAge: " + age + "\nContact: " + contact;
+	}
+
+	public static String birthday(String ssn) {
+		return "Friend's birthday: " + ssn.substring(2, 4) + "월 " + ssn.substring(4, 6) + "일";
 	}
 
 }
