@@ -63,7 +63,10 @@ public class FriendList {
 		System.out.println("Contact >>> ");
 		String contact = scn.nextLine();
 		System.out.println("Social security number >>> ");
+		// Adding social security number format validation 
 		String ssn = scn.nextLine();
+		SocialNumberValidator.checkSsn(ssn);
+		
 
 		Friend friend = new Friend(name, age, contact, ssn);
 		return friend;
