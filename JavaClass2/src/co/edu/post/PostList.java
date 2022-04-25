@@ -5,10 +5,15 @@ public class PostList implements PostService {
 	@Override
 	public void addPost() {
 		
+		System.out.println("Title >>> ");
+		System.out.println("Content >>> ");
+		
 	}
 
 	@Override
 	public void modifyPost() {
+		
+		System.out.println("");
 		
 	}
 

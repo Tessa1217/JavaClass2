@@ -5,9 +5,15 @@ public class Account {
 	// Fields 
 	private String id;
 	private String password; 
-	private final String validation;
+	private String validation;
 	
 	// Constructor 
+	
+//	Account(String id, String password) {
+//		this.id = id;
+//		this.password = password; 
+//	}
+	
 	Account(String id, String password, String validation) {
 		this.id = id;
 		this.password = password;

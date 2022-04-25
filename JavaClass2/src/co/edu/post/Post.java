@@ -1,7 +1,5 @@
 package co.edu.post;
 
-import java.time.LocalDateTime;
-
 public class Post {
 	
 	// Fields 
@@ -9,7 +7,6 @@ public class Post {
 	private String title; 
 	private String content; 
 	private String author; 
-	private LocalDateTime date;
 	
 	// Constructor
 	Post(int boardNo, String title, String content, String author) {
@@ -61,20 +58,11 @@ public class Post {
 	}
 
 
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-
-	public void setDate(LocalDateTime date) {
-		this.date = date;
-	}
-
 	// toString()
 	
 	@Override
 	public String toString() {
-		return "Post [boardNo=" + boardNo + ", title=" + title + ", author=" + author + ", date=" + date + "]";
+		return "Post [boardNo=" + boardNo + ", title=" + title + ", author=" + author + "]";
 	}
 	
 	public String detailView() {
