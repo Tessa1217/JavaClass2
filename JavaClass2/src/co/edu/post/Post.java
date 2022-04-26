@@ -12,6 +12,11 @@ public class Post {
 	private Date date;
 
 	// Constructor
+
+	Post() {
+
+	}
+
 	Post(String title, String content, String author) {
 		this.title = title;
 		this.content = content;
@@ -63,15 +68,26 @@ public class Post {
 		this.date = date;
 	}
 
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	// toString()
 
 	@Override
 	public String toString() {
-		return "Post [boardNo=" + boardNo + ", title=" + title + ", author=" + author + ", date =" + date + "]";
+		return "boardNo: " + boardNo + " | title: " + title + " | author: " + author + //
+				" | date: " + date;
 	}
 
-	public String detailView() {
-		return "Post [boardNo=\" + boardNo + \", title=\" + title + \", author=\" + author + \", date=\" + date + \"]";
+	public void detailView() {
+		String detail = "====================================================\n";
+		detail += "게시글 번호: %2d                           작성자: %-5s\n";
+		detail += "제목: %-15s\n";
+		detail += "내용: %-50s\n";
+		detail += "====================================================\n";
+		System.out.printf(detail, this.boardNo, this.author, this.title, this.content);
+
 	}
 
 }
