@@ -19,8 +19,9 @@ public class App {
 //    	we.writeChar();
 //    	we.writeString();
         
-        ReaderEx re = new ReaderEx();
-        //re.read();
-        re.readBuffer(); 
+//        ReaderEx re = new ReaderEx();
+//        //re.read();
+//        re.readBuffer(); 
+    	
     }
 }
