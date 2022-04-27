@@ -41,14 +41,14 @@ public class InPutStreamEx {
 			// 바이트 배열 선언 
 			byte[] buffer = new byte[25];
 			
+			// 버퍼 단위로 파일 읽기
 			while (true) {
 				int readByteNum = isAry.read(buffer);
 				if (readByteNum == -1) break;
-			}
-
-			for (byte buf : buffer) {
-				if (buf == 0) break;
-				System.out.print(buf + " ");
+				for (byte buf : buffer) {
+					if (buf == 0) break;
+					System.out.print(buf + " ");
+				}
 			}
 			
 			System.out.println();
