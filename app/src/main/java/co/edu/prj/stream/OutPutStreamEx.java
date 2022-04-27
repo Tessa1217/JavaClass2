@@ -36,4 +36,24 @@ public class OutPutStreamEx {
 		
 	}
 	
+	public void run2() {
+		try {
+			
+			OutputStream os = new FileOutputStream("C:\\\\Temp\\\\test5.txt");
+			
+			byte[] byteAry = {'M', 'a', 'v', 'e', 'n'};
+			os.write(byteAry);
+			
+			os.flush(); 
+			os.close(); 
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("파일을 찾기 못했습니다.");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Failed");
+			e.printStackTrace();
+		}
+	}
+	
 }
